@@ -1,0 +1,46 @@
+# system/mmf_config.yaml
+
+application:
+  name: "Ellys-MVF"
+  debug: false
+  timezone: "Asia/Seoul"
+  language: "ko"
+
+paths:
+  base_dir: "."
+  projects_dir: "projects"
+  templates_dir: "templates"
+  archive_dir: "archive"
+  scripts_dir: "scripts"
+  docs_dir: "docs"
+
+pne_matrix:
+  auto_validation: true
+  require_all_cells: false
+  gap_detection: true
+  similarity_threshold: 0.8
+
+hud_system:
+  refresh_interval: 30  # seconds
+  auto_save: true
+  xp_calculation:
+    stage_completion: 10
+    quality_bonus: 5
+    innovation_bonus: 15
+
+reporting:
+  auto_generate: false
+  template_format: "markdown"
+  include_charts: false
+  output_formats: ["md", "pdf"]
+
+logging:
+  level: "INFO"
+  file_path: "logs/ellys-mvf.log"
+  max_size: "10MB"
+  backup_count: 5
+
+performance:
+  cache_enabled: true
+  cache_timeout: 3600  # seconds
+  max_concurrent_projects: 10

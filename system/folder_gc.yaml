@@ -1,0 +1,41 @@
+# system/folder_gc.yaml
+
+gc_policy:
+  projects:
+    keep_days: 30
+    archive_days: 90
+    exceptions:
+      - "template_project"
+      - "demo_project"
+  
+  reports:
+    keep_days: 14
+    archive_days: 60
+  
+  logs:
+    keep_days: 7
+    archive_days: 30
+  
+  cache:
+    keep_days: 1
+    archive_days: 0  # direct delete
+
+schedule:
+  gc_cron: "0 3 * * *"  # Daily at 3 AM
+  notification_days: 3   # Notify 3 days before deletion
+
+notifications:
+  enabled: true
+  channels:
+    - "console"
+    - "log"
+  
+  templates:
+    warning: "Project '{name}' will be archived in {days} days"
+    archived: "Project '{name}' has been archived"
+    deleted: "Project '{name}' has been permanently deleted"
+
+safety:
+  require_confirmation: true
+  backup_before_delete: true
+  recovery_period: 30  # days in archive before permanent deletion

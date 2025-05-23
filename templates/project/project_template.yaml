@@ -1,0 +1,137 @@
+# templates/project/project_template.yaml
+
+project:
+  metadata:
+    name: ""
+    description: ""
+    created_date: ""
+    created_by: ""
+    status: "planning"  # planning, active, paused, completed, archived
+    priority: "medium"  # low, medium, high, critical
+    
+  classification:
+    domain: ""  # business, tech, education, research, etc.
+    complexity: "simple"  # simple, medium, complex
+    duration_estimate: ""  # days/weeks/months
+    team_size: 1
+    
+  objectives:
+    primary_goal: ""
+    success_criteria: []
+    key_metrics: []
+    deadline: ""
+    
+  stakeholders:
+    owner: ""
+    participants: []
+    reviewers: []
+    approvers: []
+
+stages:
+  stage00_input:
+    title: "정보 입력"
+    description: "프로젝트 기본 정보 및 목표 설정"
+    checklist:
+      - "프로젝트 목표 명확화"
+      - "성공 기준 정의"
+      - "주요 이해관계자 파악"
+      - "예상 리스크 식별"
+    deliverables:
+      - "project_charter.md"
+      - "stakeholder_analysis.md"
+    
+  stage01_problem:
+    title: "문제 정의"
+    description: "PNE 매트릭스를 통한 문제 구조화"
+    checklist:
+      - "PNE 매트릭스 작성"
+      - "핵심 Gap 식별"
+      - "문제 우선순위 설정"
+      - "가정 사항 명시"
+    deliverables:
+      - "pne_matrix.md"
+      - "problem_statement.md"
+      
+  stage02_insight:
+    title: "인사이트 도출"
+    description: "분석 및 벤치마킹을 통한 통찰 획득"
+    checklist:
+      - "관련 사례 조사"
+      - "모범 사례 분석"
+      - "패턴 및 트렌드 파악"
+      - "핵심 인사이트 도출"
+    deliverables:
+      - "benchmark_analysis.md"
+      - "key_insights.md"
+      
+  stage03_strategy:
+    title: "전략 설계"
+    description: "해결 방안 및 전략 수립"
+    checklist:
+      - "전략 대안 생성"
+      - "대안 평가 및 선택"
+      - "전략 로드맵 작성"
+      - "리스크 대응 계획"
+    deliverables:
+      - "strategy_document.md"
+      - "risk_mitigation.md"
+      
+  stage04_action:
+    title: "실행 계획"
+    description: "구체적 액션 플랜 수립"
+    checklist:
+      - "WBS 작성"
+      - "일정 계획 수립"
+      - "자원 할당 계획"
+      - "마일스톤 설정"
+    deliverables:
+      - "action_plan.md"
+      - "resource_plan.md"
+      
+  stage05_hypothesis:
+    title: "가설 검증"
+    description: "핵심 가정 사항 검증"
+    checklist:
+      - "검증 가능한 가설 설정"
+      - "검증 방법 정의"
+      - "테스트 계획 수립"
+      - "성공/실패 기준 설정"
+    deliverables:
+      - "hypothesis_test.md"
+      - "validation_plan.md"
+      
+  stage06_execution:
+    title: "실행"
+    description: "계획 실행 및 모니터링"
+    checklist:
+      - "실행 시작"
+      - "진행 상황 모니터링"
+      - "이슈 대응"
+      - "중간 점검"
+    deliverables:
+      - "execution_log.md"
+      - "progress_report.md"
+      
+  stage07_simulation:
+    title: "시뮬레이션"
+    description: "결과 분석 및 시나리오 검토"
+    checklist:
+      - "결과 분석"
+      - "시나리오 비교"
+      - "교훈 도출"
+      - "개선 방안 수립"
+    deliverables:
+      - "result_analysis.md"
+      - "lessons_learned.md"
+
+settings:
+  auto_save: true
+  backup_frequency: "daily"
+  notification_enabled: true
+  collaboration_mode: false
+  
+templates:
+  report_format: "markdown"
+  include_charts: false
+  auto_toc: true
+  export_formats: ["md", "pdf"]

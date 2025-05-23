@@ -1,0 +1,31 @@
+# system/version.yaml
+
+current_version:
+  major: 1
+  minor: 0
+  patch: 0
+  build: "20240523-001"
+  
+release_info:
+  codename: "Genesis"
+  release_date: "2024-05-23"
+  stability: "stable"
+  
+changelog:
+  - version: "1.0.0"
+    date: "2024-05-23"
+    changes:
+      - "Initial MVF release"
+      - "Core PNE matrix implementation"
+      - "Basic HUD and XP system"
+      - "Capsule and Undo functionality"
+      - "Template-based reporting"
+
+dependencies:
+  python: ">=3.8"
+  pyyaml: ">=6.0"
+  markdown: ">=3.4"
+  
+compatibility:
+  min_framework_version: "1.0.0"
+  max_framework_version: "1.x.x"

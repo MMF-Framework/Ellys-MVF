@@ -1,0 +1,54 @@
+# system/manifest.yaml
+
+system:
+  name: "Ellys-MVF"
+  version: "1.0.0"
+  description: "MMF Ellys Minimum Viable Framework"
+  author: "MMF-Framework"
+  license: "MIT"
+  
+metadata:
+  created_date: "2024-05-23"
+  last_updated: "2024-05-23"
+  framework_type: "strategy_execution"
+  target_audience: "small_teams"
+  complexity_level: "minimal"
+
+components:
+  core_modules:
+    - pne_matrix
+    - hud_xp
+    - capsule_undo
+    - report_generator
+  
+  optional_modules:
+    - roleplay_scenarios
+    - advanced_analytics
+  
+  active_features:
+    auto_gc: true
+    version_control: true
+    backup_system: true
+    hud_dashboard: true
+
+status:
+  system_health: "healthy"
+  active_projects: 0
+  last_gc_run: null
+  last_backup: null
+
+policies:
+  retention:
+    projects: 30  # days
+    archives: 90  # days
+    logs: 7      # days
+  
+  security:
+    auth_required: false
+    backup_encryption: false
+    audit_logging: true
+  
+  automation:
+    auto_cleanup: true
+    auto_backup: true
+    auto_reporting: false
